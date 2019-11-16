@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-13 12:20:45</nc-post-date>
+		<nc-title>Ngôn ngữ C là gì?</nc-title>
+		<nc-tags>ngon, ngu, c, la, gi</nc-tags>
+		<nc-post-details category="posts" post-name="ngon-ngu-c-la-gi" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<b>" Ngôn ngữ lập trình C</b> là một ngôn ngữ mệnh lệnh được phát triển từ đầu 1970 bởi Dennis Ritchie để dùng trong hệ điều hành <strong>UNIX</strong>. Từ đó, <strong>C</strong> đã lan rộng ra nhiều hệ điều hành khác và trở thành một những ngôn ngữ phổ dụng nhất." - Theo WikiPedia.<!--more-->
+<h2>Dùng ngôn ngữ C để làm gì?</h2>
+<strong>C</strong> được phát triển ban đầu cho việc phát triển hệ thống, đặc biệt là các hệ điều hành. <strong>C</strong> được thừa nhận như là một trong các ngôn ngữ phát triển hệ thống bởi nó cung cấp code và chạy một đoạn code một các nhanh chóng như các ngôn ngữ kiểu Assemly. <strong>C</strong> có thể dùng vào một số lĩnh vực như:
+<ul class="list">
+ 	<li>Hệ điều hành</li>
+ 	<li>Bộ biên dịch các ngôn ngữ</li>
+ 	<li>Các chương trình dịch mã số</li>
+ 	<li>Các trình in ấn</li>
+ 	<li>Network Drivers</li>
+ 	<li>Ngôn ngữ thông dịch</li>
+ 	<li>Tiện ích</li>
+ 	<li>...</li>
+</ul>
+<h2><strong>Học C xong có thể làm được gì?</strong></h2>
+- <a href="./lap-trinh-game-voi-c">Lập trình game với <strong>C</strong></a>, <a href="./lap-trinh-ung-dung-da-nen">lập trình ứng dụng đa nền tảng</a> cực mạnh.
+- Lập trình hệ điều hành với <strong>C</strong> chuẩn như viết hệ điều hành, can thiệp sâu vào hệ thống.
+- Lập trình <a href="./thuattoanc/">thuật toán với <strong>C </strong></a>chuẩn cho tốc độ nhanh hơn rất nhiêu so với các ngôn ngữ khác.
+- <a href="./lap-trinh-nhung">Lập trình nhúng</a>, các thiết bị điện tử, ...
+...
+<h2>Chương trình C</h2>
+Một chương trình <strong>C</strong> có thể thay đổi từ 3 dòng đến hàng triệu dòng code, và nên được viết trong một hoặc nhiều file với định dạng "<b>.c</b>", ví dụ <strong>nghichcode</strong><b>.c</b>.
+<blockquote>Tiếp theo mình sẽ hướng dẫn các bạn cách cài IDE để lập trình <strong>C</strong> và các bài học về <strong>C</strong>.</blockquote>
+]]>
+		</nc-content>
+	</nc-parent>

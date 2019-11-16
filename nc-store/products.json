@@ -1,0 +1,33 @@
+[
+	{"productId":1,
+	"qrCode":"08936017364113",
+	"itemName":"T\u01af\u01a0NG \u1edaT CHIN-SU M\u1edaI",
+	"commonName":"Tuong ot Chinsu",
+	"price":3000,
+	"keycode":"GTIN",
+	"gtn":"8936017360009",
+	"partyName":"C\u00f4ng ty C\u1ed5 ph\u1ea7n H\u00e0ng ti\u00eau d\u00f9ng Masan",
+	"description":"Tuong ot chin su",
+	"trusted":true
+	},
+	{"productId":11,
+	"qrCode":"08936036828207",
+	"itemName":"Giay vo Hai Tien",
+	"commonName":"Vo Hai Tien",
+	"price":2000,
+	"keycode":"GTIN",
+	"gtn":"8936017360009",
+	"partyName":"Unknow",
+	"description":"Giay Vo Hai Tien Chat Luong tot",
+	"trusted":false
+	},
+	{"productId":2,"qrCode":"0893601736000","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 0","price":4000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":3,"qrCode":"0893601736001","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 1","price":45000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":4,"qrCode":"0893601736002","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 2","price":5000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":5,"qrCode":"0893601736003","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 3","price":8000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":6,"qrCode":"0893601736004","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 4","price":9000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":7,"qrCode":"0893601736005","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 5","price":12000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":8,"qrCode":"0893601736006","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 6","price":66000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":9,"qrCode":"0893601736007","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 7","price":42000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true},
+	{"productId":10,"qrCode":"0893601736008","itemName":"TƯƠNG ỚT CHIN-SU MỚI","commonName":"Tuong ot Trung Thanh - 8","price":74543000,"keycode":"GTIN","gtn":"8936017360009","partyName":"Công ty Cổ phần Hàng tiêu dùng Masan","description":"Tuong ot chin su","trusted":true}
+]

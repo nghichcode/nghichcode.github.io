@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2016-09-01 11:33:16</nc-post-date>
+		<nc-title>Giới thiệu</nc-title>
+		<nc-tags>intro</nc-tags>
+		<nc-post-details category="posts" post-name="intro" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<div>"Nghịch code" không phải là phá phách mà "Nghịch code" để ta hiểu sâu hơn về nó, thoát khỏi cái lối tư duy máy móc, gò bó. Chính vì vậy mình-Kẻ nghịch code- đã tạo ra blog này để mọi người có thể code tốt hơn, hiểu về code hơn. Ngoài Code mình cũng thích viết về một số chủ đề khác với tính chất giải trí. :)</div>
+<div>Nếu có gì sai sót trong các bài viết xin vui lòng để lại bình luận hoặc gửi thư phản hồi tới địa chỉ <a href="mailto:nghichcode@gmail.com" target="_blank">nghichcode@gmail.com</a></div>
+]]>
+		</nc-content>
+	</nc-parent>

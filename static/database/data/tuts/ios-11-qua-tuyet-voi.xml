@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-17 19:01:22</nc-post-date>
+		<nc-title>IOS 11 quá tuyệt vời!</nc-title>
+		<nc-tags>ios, 11, qua, tuyet, voi</nc-tags>
+		<nc-post-details category="posts" post-name="ios-11-qua-tuyet-voi" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<ul>
+ 	<li><strong>Thay đổi các tuỳ chỉnh Camera ngay trong ứng dụng</strong></li>
+</ul>
+
+
+Mặc định chúng ta cần phải vào Settings nếu muốn thay đổi fps, độ phân giải khi quay video hay bật tắt lưới canh, mong rằng iOS mới sẽ giải quyết được vấn đề này.
+<ul>
+ 	<li><strong>Bàn phím tự phát hiện ra vị trí ngón tay</strong></li>
+</ul>
+Apple đã được cấp bằng sáng chế về việc bàn phím sẽ tự động thay đổi sao cho phù hợp với vị trí đặt tay của bạn, điều này cho phép chúng ta gõ chính xác và thoải mái hơn rất nhiều, đặt biệt khi phải gõ với bàn phím ảo của iPad thì việc này giúp chúng ta đỡ phải nhìn vào bàn phím hơn.
+<ul>
+ 	<li><strong>Siri sẽ chân thật, tự nhiên hơn</strong></li>
+</ul>
+Apple sẽ có sự cải tiến lớn cho Siri, giúp "cô ta" chân thật hơn, nhờ vào hệ thống trí thông minh nhân tạo ( AI) của VocalIQ- một công ty đã được Apple mua lại vào năm ngoái. Điều này sẽ giúp Siri có thể đạt được lợi thế lớn trong việc cạnh tranh với những đối thủ như Google Assistant, Cortana, hay Alexa của Amazon. Trước khi mua được mua lại bởi Apple thì AI của VocalIQ đã có những bài kiểm tra sản phẩm của họ với các đối thủ kể trên, kết quả khá tốt khi mà với những câu lệnh dài và phức tạp, các đối thủ gặp rất nhiều khó khăn trong khi hệ thống của họ lại chiến tốt :D
+<ul>
+ 	<li><strong>Giao diện ban đêm.</strong></li>
+</ul>
+<strong>Giao diện ban đêm </strong><span style="font-size: 16px; line-height: 1.5;">sẽ giúp chúng ta đỡ nhức mắt hơn khi nhìn màn hình lâu vào ban đêm.</span>
+Siri gọi Dark Mode là một "setting", chứng tỏ Dark Mode có tồn tại
+<ul>
+ 	<li><strong>Facetime</strong></li>
+</ul>
+Theo The Verifier, Apple sẽ chiều lòng người dùng bằng cách đưa vào <strong>Facetime</strong> tính năng <strong>gọi nhiều người cùng một lúc</strong>. Không dừng lại ở đó, Apple sẽ làm cho Facetime trở nên thu hút hơn bằng cách cung cập những bộ lọc như tương tự như Snapchat.
+<ul>
+ 	<li><strong>Tăng khả năng tương tác của Control Center</strong></li>
+</ul>
+Trong Android, giữ lâu vào icon wifi thì có thể vào trình cài đặt của wifi nhưng iOS thì không. Chúng ta cũng không có bật tắt 3G, vẫn phải rườm ra hai, ba bước. Người dùng iOS rất mong trong bản cập nhật lớn này Apple sẽ cải tiến Control Center để nó giúp người dùng trải nghiệm tốt hơn và nếu được, sẽ tích hợp 3D touch.
+<ul>
+ 	<li><strong>Giao diện người dùng</strong></li>
+</ul>
+Apple luôn chăm chút trong giao diện người dùng như việc thanh kéo điều chỉnh sẽ chạy theo quán tính khi chúng ta thả ra hay đồng hồ chạy liên tục trên icon của nó. Hy vọng Apple sẽ tiếp tục làm tốt hơn với giao diện người dùng - thứ mà đập vào mắt ta mỗi ngày, ví dụ như hiển thị nhiệt độ trên icon Thời tiết, hiển thị vị trí của chúng ta trên icon bản đồ, hiển thị người gửi tin nhắn trong icon tin nhắn, tuỳ chỉnh thoải mái vị trí các icon...vv...vv
+<ul>
+ 	<li><strong>Smart Wi-Fi</strong></li>
+</ul>
+Smart Wifi cho phép tuỳ chỉnh wifi hoạt động thông minh và hiệu quả hơn, ví dụ như tự kết nối vào mạng nào sóng mạnh nhất, tự động bật wifi khi đang ở một khu vực nào đó và tắt khi chúng ta rời đi. Điều này giúp tối ưu thời lượng pin hơn và giúp trải nghiệm người dùng trở nên tốt hơn rất nhiều
+<ul>
+ 	<li><strong>TouchID cho mỗi ứng dụng</strong></li>
+</ul>
+Hiện tại mặc định hệ thống chỉ mới cho phép khoá mật khẩu và TouchID cho ứng dụng ghi chú, hi vọng iOS sẽ mở rộng phạm vi hơn vì điều này giúp chúng ta bảo vệ thông tin tốt hơn và tự tin hơn khi cho người khác mượn điện thoại sử dụng .
+]]>
+		</nc-content>
+	</nc-parent>

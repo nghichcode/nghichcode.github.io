@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2016-11-20 07:52:14</nc-post-date>
+		<nc-title>THUẬT TOÁN C CƠ BẢN (II)</nc-title>
+		<nc-tags>thuat, toan, c, co, ban, ii</nc-tags>
+		<nc-post-details category="posts" post-name="thuat-toan-c-co-ban-ii" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411715"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">1.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Giai thừa: n! . (Factorial)</span></a></div>
+<div class="MsoNormal" style="text-indent: 36pt;"></div>
+<div class="MsoNormal" style="text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 1: </span></b><span lang="EN-US" style="font-size: 12pt;">Không tạo hàm.<b></b></span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;">
+
+<b><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include &lt;<strong>stdio.h&gt;</strong></span></b></b>
+
+</div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n,i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   long giaithua=1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   for(i=2;i&lt;=n;i++)</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          giaithua=giaithua*i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d! = %ld",n,giaithua);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 2.1: </span></b><span lang="EN-US" style="font-size: 12pt;">Tạo hàm (dễ).</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b></b><b></b>
+<b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include &lt;<strong>stdio.h&gt;</strong></span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">long giaithua(int n){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   long gt=1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   for(i=2;i&lt;=n;i++)</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          gt=gt*i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return gt;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n; </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d! = %ld",n,giaithua(n));</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 2.2: </span></b><span lang="EN-US" style="font-size: 12pt;">Tạo hàm (Đệ qui).</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;">
+
+<b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include &lt;<strong>stdio.h&gt;</strong></span></b>
+
+<b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;"><b></b>long </span></b><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">giaithua(int n){</span></b>
+
+</div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   if (n==0) return 1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   else return n*giaithua(n-1);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n; </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d! = %ld",n,giaithua(n));</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411716"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">2.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Tổ hợp chập k của n. (C<sup>k</sup><sub>n</sub>)</span></a></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 1:
+</span></b><span lang="EN-US" style="font-size: 12pt;">Dùng lại hàm </span><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">giaithua()</span></b><span lang="EN-US" style="font-size: 12pt;">: <i>n<b>C</b>k =n!/((n-k)!*k!) =n!/(n-k)!/k!</i></span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;">
+
+<b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include &lt;<strong>stdio.h&gt;</strong></span></b>
+
+<b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">long </span></b><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">giaithua(int n){</span></b>
+
+</div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   if (n==0) return 1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   else return n*giaithua(n-1);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n,k; </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so k: ");
+scanf("%d",&amp;k);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%dC%d = %ld",n,k,
+giaithua(n)/giaithua(n-k)/giaithua(k));</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 2:
+</span></b><span lang="EN-US" style="font-size: 12pt;">Không dùng hàm. (Trí tuệ)</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n,k, i,C=1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so k: ");
+scanf("%d",&amp;k);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   for(i=1;i&lt;=n-k;i++) C=C*(n-i+1)/i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%dC%d = %ld\n",n,k, C);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"><i><span style="color: #e36c0a; font-size: 12pt;">Lưu ý: </span></i><i><span lang="EN-US" style="font-size: 12pt;">C rất mềm dẻo nên ta có thể khai báo biến ở bất cứ đâu</span></i><i><span style="color: #e36c0a; font-size: 12pt;">.</span></i><i></i></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411717"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">3.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Số hoàn hảo.</span></a></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">Số hoàn hảo là số có tổng các ước bằng chính nó!</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">Ví dụ:
+6 = 1+2+3</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n,sum=0,i; </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   for(i=1;i&lt;=n/2;i++) </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          if (n%i==0) sum=sum+i;            </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   if (sum==n) printf("%d la so hoan hao.",n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   else printf("%d khong la so hoan hao.",n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 36pt;"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411718"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">4.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Đếm số chữ số của 1 số.</span></a></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n,num=0; </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (n!=0){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          num++;//hoac num=num+1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          n=n/10;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }      </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">    printf("So vua nhap co %d chu
+so.",num);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411719"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">5.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Kiểm tra số nguyên tố. (PrimeNumber)</span></a></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n,i,nguyeto=1; </span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap so n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   if (n</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   else for(i=2;i&lt;=sqrt(n);i++)</span></b></div>
+<div class="MsoNormal" style="margin-left: 54pt; text-indent: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;"> if (n%i==0)
+nguyeto=0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   if (nguyeto==1) printf("%d la so nguyen
+to.",n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   else printf("%d khong la so nguyen
+to.",n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><span style="color: #e36c0a; font-size: 12pt;">Lưu
+ý: </span><span lang="EN-US" style="font-size: 12pt;">Trên đây là
+cách phổ biến nhất. Có một cách  hay hơn
+mà không cần dùng</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><span lang="EN-US" style="font-size: 12pt;">thư viện </span><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">math.h </span></b><span lang="EN-US" style="font-size: 12pt;">đó là thay
+vòng for ở trên bằng:</span></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">for(i=2;<span style="color: red;">i*i&lt;=n</span>;i++) if
+(n%i==0) nguyeto=0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411720"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">6.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Phân tích một số thành thừa số nguyên tố.</span></a></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">Phân
+tích 1 sô thành thừa số nguyên tố và đưa kết quả dưới dạng</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">(m1,n1)</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">(m2,n2)</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">…</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">Trong
+đó m là thừa số nguyên tố, n là số mũ,</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">Ví dụ:
+6= 2<sup>1 </sup>+ 3<sup>1</sup></span></div>
+<div class="MsoListParagraph" style="margin-left: 54pt; text-indent: -18pt;"><!-- [if !supportLists]--><span lang="EN-US" style="font-family: 'wingdings'; font-size: 12pt;">ð<span style="font-family: 'times new roman'; font-size: 7pt; font-stretch: normal; line-height: normal;">  </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Output: </span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-family: 'courier'; font-size: 12pt;">(2, 1)</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-family: 'courier'; font-size: 12pt;">(3, 1)</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="font-size: 12pt;">            <i>Code:</i></span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int i=2;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (n!=1){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          int dem=0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          while (n%i==0) {</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">                 n=n/i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">                 dem++;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          if (dem!=0) printf("(%d,
+%d)\n",i,dem);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          i++;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b><span lang="EN-US"><br style="page-break-before: always;" /></span><b></b></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411721"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">7.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Ước chung lớn nhất. (Greatest common divisor)</span></a></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="EN-US" style="font-size: 12pt;">Để tính</span> <span lang="EN-US" style="font-size: 12pt;">ước chung lớn nhất của 2 số a, b ta có 2 cách.</span></div>
+<div class="MsoNormal" style="margin-left: 36pt; text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 1:
+</span></b><span lang="EN-US" style="font-size: 12pt;">Thuật toán trừ liên tiếp.</span></div>
+<div class="MsoNormal" style="text-indent: 18pt;"><span lang="EN-US" style="font-size: 12pt;">Xét 2
+số ban đầu a,b ta lấy số lớn hơn trừ số nhỏ hơn. Sau đó lại xét hai số là số
+nhỏ hơn</span></div>
+<div class="MsoNormal" style="text-indent: 18pt;"><span lang="EN-US" style="font-size: 12pt;">và hiệu
+vừa nhận được,… Tiếp tục cho đến khi được 2 sô bằng nhau đó chính là UCLN(a,b).</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int a,b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so a, b: "); scanf("%d
+%d",&amp;a,&amp;b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (a!=b)</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          if (a&gt;b) a=a-b; else b=b-a;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("UCLN = %d",b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="text-indent: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 36pt; text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách 2:
+</span></b><span lang="EN-US" style="font-size: 12pt;">Thuật toán chia liên tiếp.</span></div>
+<div class="MsoNormal" style="text-indent: 18pt;"><span lang="EN-US" style="font-size: 12pt;">Xét 2
+số ban đầu a,b. Tính r là số dư của phép chia a cho b. Nếu r khác 0 thì xét cặp
+số</span></div>
+<div class="MsoNormal" style="text-indent: 18pt;"><span lang="EN-US" style="font-size: 12pt;"> a (bằng b), b (bằng r),… Kết thúc quá trình
+lặp (r=0), b chính là UCLN(a,b).</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int a,b,r;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so a, b: ");
+scanf("%d %d",&amp;a,&amp;b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   r=a%b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (r!=0) {</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          a=b; b=r; r=a%b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("UCLN = %d",b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 36pt; text-indent: 36pt;"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411722"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">8.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Tính </span></a><span lang="EN-US" style="font-size: 12pt;"> .</span></div>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="./wp-content/uploads/2016/11/c4cc5-image002.png"><img src="./wp-content/uploads/2016/11/c4cc5-image002.png" border="0" /></a></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><span lang="EN-US" style="font-size: 12pt;">       Kết
+quả  sẽ được in ra dạng phân số
+tối giản(e/f).</span></div>
+<div class="MsoNormal" style="margin-left: 36pt;"><span lang="FR" style="font-size: 12pt;">Để tính ta chỉ cần gán:</span></div>
+<div class="MsoNormal" style="margin-left: 36pt; text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">e=a*d+b*c ;</span></b></div>
+<div class="MsoNormal" style="margin-left: 36pt; text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">f=b*d ;</span></b></div>
+<div class="MsoNormal"><b><span lang="EN-US" style="font-size: 12pt;">            </span></b><span lang="EN-US" style="font-size: 12pt;">Sau đó tìm<b> UCLN(e,f) </b></span></div>
+<div class="MsoNormal"><b><span lang="EN-US" style="font-size: 12pt;">            Kết
+quả:</span></b></div>
+<div class="MsoNormal"><b><span lang="EN-US" style="font-size: 12pt;">                        e/
+UCLN(e,f) </span></b></div>
+<div class="MsoNormal" style="margin-left: 36pt; text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">f/
+UCLN(e,f)</span></b></div>
+<div class="MsoNormal"><span lang="EN-US" style="font-size: 12pt;">            chính là phân số tối giản của phép
+cộng ở đề bài.</span></div>
+<div class="MsoNormal"><span lang="EN-US" style="font-size: 12pt;">            <i>Để
+hiểu rõ hơn hãy xem đoạn code sau :</i></span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int UCLN(int a,int b){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int r=a%b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (r!=0) {</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          a=b; b=r; r=a%b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int a,b,c,d,e,f;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so a, b: ");
+scanf("%d %d",&amp;a,&amp;b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so c, d: ");
+scanf("%d %d",&amp;c,&amp;d);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   e=a*d+b*c;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   f=b*d;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d/%d + %d/%d =
+%d/%d",a,b,c,d,e/UCLN(e,f),f/UCLN(e,f));</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return
+0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal" style="text-indent: 36pt;"><b><span lang="EN-US" style="font-size: 12pt;">Cách nữa: </span></b><span lang="EN-US" style="font-size: 12pt;">Dành
+cho ai không thích dùng hàm, nhưng hơi phức tạp.</span></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int a,b,c,d,e,f;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so a, b: ");
+scanf("%d %d",&amp;a,&amp;b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so c, d: ");
+scanf("%d %d",&amp;c,&amp;d);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   e=a*d+b*c;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   f=b*d;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   //Tìm UCLN cua (e,f)</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int m=e,n=f;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int r=e%f;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (r!=0) {</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          m=n; n=r; r=m%n;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   //Thu duoc UCLN cua (e,f) la n</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d/%d + %d/%d = %d/%d",a,b,c,d,e/n,f/n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411723"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">9.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">      </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Bội chung nhỏ nhất. (Least common multiple)</span></a></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"><span lang="EN-US" style="font-size: 12pt;">Xét 2 số ban đầu a,b. BCNN(a,b)= a*b/UCLN(a,b).</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int a,b,r;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap 2 so a, b: ");
+scanf("%d %d",&amp;a,&amp;b);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   <i>// Luu gia tri cua a,b</i></span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int la=a,lb=b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   <i>//Tim UCLN(a,b)</i></span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   r=a%b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (r!=0) {</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          </span></b><b><span lang="FR" style="font-family: 'consolas'; font-size: 10pt;">a=b; b=r; r=a%b;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="FR" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><i><span lang="FR" style="font-family: 'consolas'; font-size: 10pt;">   // BCNN = (la*lb/b) vi b la UCLN</span></i></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="FR" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d",(la*lb/b));</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="FR" style="font-family: 'consolas'; font-size: 10pt;">   </span></b><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt; text-indent: 18pt;"></div>
+<div class="MsoListParagraphCxSpFirst" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411724"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">10.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">  </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Tìm i sao cho: 1+2+3+…+i<s></s></span></a></div>
+<div class="MsoListParagraphCxSpLast"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int s;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap S: ");
+scanf("%d",&amp;s);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int i=1,sumi=0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (sumi+i<s></s></span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          sumi=sumi+i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          i++;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   i--;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%d",i);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoListParagraph" style="text-indent: -18pt;"><a href="https://www.blogger.com/null" name="_Toc467411725"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12pt;">11.<span style="font-size: 7pt; font-stretch: normal; line-height: normal;">  </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12pt;">Tính tổng:</span></a> <span lang="EN-US" style="font-size: 12pt;"> </span></div>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="./wp-content/uploads/2016/11/92816-image003.png"><img src="./wp-content/uploads/2016/11/92816-image003.png" border="0" /></a></div>
+<div class="MsoNormal" style="margin-left: 18pt;"></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">#include
+</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">int main(){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int n;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("Nhap n: ");
+scanf("%d",&amp;n);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   int i=1;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   float s=0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   while (i&lt;=n){</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          s=s+1.0/i;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">          i++;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   }</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   printf("%.4f",s);</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">   return 0;</span></b></div>
+<div class="MsoNormal" style="margin-left: 18pt;"><b><span lang="EN-US" style="font-family: 'consolas'; font-size: 10pt;">}</span></b></div>
+]]>
+		</nc-content>
+	</nc-parent>

@@ -1,0 +1,25 @@
+{
+	"responseHeader": {
+		"responderGLN":"9501101020016",
+		"numberOfHits":1,
+		"gepirReturnCode":{"_":"0"}
+	},
+		"gepirItem":{
+			"itemDataLine":{
+				"itemDataLanguage":{"_":"vi"},
+				"lastChangeDate":"2019-01-08T21:00:01.752+07:00",
+				"returnCode":{"_":"0","codeListVersion":"1.0"},
+				"itemName":"T\u01af\u01a0NG \u1edaT CHIN-SU M\u1edaI",
+				"gepirRequestedKey":{
+					"requestedKeyCode":{
+						"_":"GTIN",
+						"codeListVersion":"1"
+						},
+					"requestedKeyValue":"08936017364113"},
+					"informationProvider":{
+						"gln":"8936017360009",
+						"partyName":"C\u00f4ng ty C\u1ed5 ph\u1ea7n H\u00e0ng ti\u00eau d\u00f9ng Masan"
+					}
+			}
+	}
+}

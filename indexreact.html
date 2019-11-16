@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Nghịch Code - Trang Chủ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./images/home/favicon.jpg">
+  <link rel="icon" href="./images/home/favicon.jpg">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta name="google-site-verification" content="HlowUAzmlLhJ6MlSoDl-a5KglR9yHu4AV107L3CZjmM" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101673737-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());gtag('config', 'UA-101673737-1');
+  </script>
+
+  <!--boostrap-->
+  <!--host-->
+  <link rel="stylesheet" href="./libs4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./libs4/fas-icon/css/all.css">
+  <script language="javascript" src="./libs4/js/jquery-3.3.1.min.js"></script>
+  <script language="javascript" src="./libs4/js/popper.min.js"></script>
+  <script language="javascript" src="./libs4/js/bootstrap.min.js"></script>
+  <script language="javascript" src="./database/database.js"></script>
+
+  <script language="javascript" src="./nclibs/js/progress-bar.js"></script>
+  <script language="javascript" src="./nclibs/js/nc-rand.js"></script>
+
+  <script language="javascript" src="./jslibs/reactjs/core/babel.min.js"></script>
+  <script language="javascript" src="./jslibs/reactjs/core/react.production.min.js"></script>
+  <script language="javascript" src="./jslibs/reactjs/core/react-dom.production.min.js"></script>
+  <script type="text/babel" src="./nclibs/jsx/nc.jsx"></script>
+
+  <link rel="stylesheet" href="./nclibs/css/progress-bar.css">
+  <link rel="stylesheet" href="./nclibs/css/nc.css">
+  <!-- Menu -->
+  <link rel="stylesheet" href="./nclibs/menu/css/style.css">
+
+</head>
+<body>
+<div class="nav-progress-bar"></div>
+<!-- MENU -->
+<div class="overlay-navigation">
+  <nav class="bty-menu" role="navigation">
+    <ul>
+      <li><a href="index.html" data-content="Welcome to NghichCode!">Home</a></li>
+      <li><a href="posts.html" data-content="My blog?">Blog</a></li>
+      <li><a href="products.html" data-content="My products...">Products</a></li>
+      <li><a href="tuts.html" data-content="Some tutorials...">Tutorial</a></li>
+      <li><a href="contact.html" data-content="Contact me!">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+<section class="home">
+  <header class="container-fluid header-wrapper pb-2">
+    <h1 class="mb-3 pt-2"><a href="index.html">Nghich Code</a></h1>
+    <p>Code một cách tốt hơn</p>
+    <div class="empty-block"></div>
+  </header>
+  <div class="open-overlay"><span class="bar-top"></span><span class="bar-middle"></span><span class="bar-bottom"></span></div>
+</section>
+  <script  src="./nclibs/menu/js/velocity.min.js"></script>
+  <script  src="./nclibs/menu/js/velocity.ui.min.js"></script>
+  <script  src="./nclibs/menu/js/index.js"></script>
+
+<!-- IMG -->
+<section id="banner">
+  <div class="inner">
+    <h1>Hello! I'm Tin Cya. <span>I live in Ha Noi, Viet Nam.<br>Welcome to my website.</span></h1>
+    <a href="contact.html" class="button alt">Contact me</a>
+    <a href="posts.html" class="button alt">My Blog</a>
+  </div>
+</section>
+<!-- Menu -->
+<section id="nav-menu" class="container"></section>
+<!-- Slide -->
+<section id="recent-post" class="container">
+  <div class="h-sm-auto oflow-hidden h-400x">
+    <div class="col-md-8 col-sm-12 float-sm-none float-left w-sm-100 h-100 h-sm-300x pl-0 pr-5 pb-5 pr-sm-0">
+      <div class="pos-relative h-100 dplay-block">
+        <div class="img-bg"><img src="./images/home/slider-1-1200x900.jpg"/></div>
+        <div class="abs-blr bg-opac-6">
+          <a href="index.html" class="h5"><b>Title: Peter Thiels VC Found Invests Million into Bitcoin</b></a><br/>
+          <span>by <a href="author.html" class="color-primary"><b>Author Capzallo</b></a> Jan 25, 2018</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 float-sm-none float-left w-sm-100 h-100 h-sm-600x pr-0 pl-5">
+      <div class="pb-5 pl-sm-0 ptb-sm-5 pos-relative h-50">
+        <div class="pos-relative h-100 dplay-block">
+          <div class="img-bg"><img src="./images/home/slider-2-450x600.jpg"/></div>
+          <div class="abs-blr bg-opac-6">
+            <a class="h6"><b>Russians Bisiops Condems Cryptocurrecy</b></a><br/>
+            <span>Jan 25, 2018</span>
+          </div>
+        </div>
+      </div>
+      <div class="ptb-5 pl-sm-0 pos-relative h-50">
+        <div class="pos-relative h-100 dplay-block">
+          <div class="img-bg"><img src="./images/home/slider-3-450x600.jpg"/></div>
+          <div class="abs-blr bg-opac-6">
+            <a class="h6"><b>Russians Bisiops Condems Cryptocurrecy</b></a><br/>
+            <span>Jan 25, 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-sm-auto oflow-hidden h-200x-fl dp-sm-bl" id="recent-post-bt">
+      <div class="col-md-4 col-sm-12 float-left float-sm-none pos-relative ptb-5 pl-sm-0 h-100 h-sm-300x pr-5 pl-0 ">
+        <div class="pos-relative h-100 dplay-block">
+          <div class="img-bg"><img src="./images/home/slider-2-450x600.jpg"/></div>
+          <div class="abs-blr bg-opac-6">
+            <a class="h6"><b>Russians Bisiops Condems Cryptocurrecy</b></a><br/>
+            <span>Jan 25, 2018</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 float-left float-sm-none pos-relative ptb-5 pl-sm-0 h-100 h-sm-300x pr-5 pl-5 ">
+        <div class="pos-relative h-100 dplay-block">
+          <div class="img-bg"><img src="./images/home/slider-3-450x600.jpg"/></div>
+          <div class="abs-blr bg-opac-6">
+            <a class="h6"><b>Russians Bisiops Condems Cryptocurrecy</b></a><br/>
+            <span>Jan 25, 2018</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 float-left float-sm-none pos-relative ptb-5 pl-sm-0 h-100 h-sm-300x pr-0 pl-5 ">
+        <div class="pos-relative h-100 dplay-block">
+          <div class="img-bg"><img src="./images/home/slider-3-450x600.jpg"/></div>
+          <div class="abs-blr bg-opac-6">
+            <a class="h6"><b>Russians Bisiops Condems Cryptocurrecy</b></a><br/>
+            <span>Jan 25, 2018</span>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</section>
+<!-- POSTS -->
+<section id="all-posts" class="container pb-50">
+<div class="row">
+  <div id="single-pp" class="col-md-12 col-lg-8"></div>
+  <div id="home-page" class="col-md-12 col-lg-8">
+    <h4 class="p-title"><b>POPULAR POSTS</b></h4>
+    <div class="row">
+      <div id="posts-bg" class="col-sm-6"></div>
+      <div id="posts-sm" class="col-sm-6"></div>
+    </div>
+    <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="page.html#tuts"><b>VIEW MORE POSTS</b></a>
+    
+    <h4 class="p-title"><b>MY TUTORIALS</b></h4>
+    <div id="tuts" class="row"></div>
+    <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="page.html#posts"><b>VIEW MORE TUTORIALS</b></a>
+  </div>
+  
+  <div class="d-none d-md-block d-lg-none col-md-3"></div>
+  <div class="col-md-6 col-lg-4">
+    <div class="pl-20 pl-md-0">
+      <div class="mtb-50">
+        <h4 class="p-title"><b>MY PRODUCTS</b></h4>
+        <div id="products"></div>
+        <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="page.html#products"><b>VIEW MORE PRODUCTS</b></a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer class="container-fluid footer-wrapper" style="clear:left;">
+  <div class="pos-relative">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="mb-30">
+          <p class="mb-20 color-ccc">
+            <span class="h5" style="color: orangered;font-weight: bold;font-family: 'Pacifico', cursive;">Nghich Code</span> được tạo ra nhằm mục đích cung cấp cho mọi người những kiến thức mới về code, những thủ thuật code thú vị. Ngoài ra là một số bài viết về những thứ liên quan đến code mà những lập trình viên nên đọc.</p>
+          <p class="color-ash">Copyright &copy; 2018 Nghich Code. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="mb-30">
+          <h5 class="color-primary mb-20"><b>CATEGORIES</b></h5>
+          <div class="mb-10"><a class="color-white" href="posts.html"><b>Posts</b></a></div>
+          <div class="mb-10 brdr-ash-1"></div>
+          <div class="mb-10"><a class="color-white" href="products.html"><b>Products</b></a></div>
+          <div class="mb-10 brdr-ash-1"></div>
+          <div class="mb-10"><a class="color-white" href="tuts.html"><b>Tutorials</b></a></div>
+          <div class="mb-10 brdr-ash-1"></div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="mb-30">
+          <h5 class="color-primary mb-20"><b>RECENT NEWS</b></h5>
+          <div id="posts-min"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

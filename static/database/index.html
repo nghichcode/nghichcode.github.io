@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="database.js"></script>
+        <script>
+        window.onload = function() {
+            for(var i=0; i<db.length; i++){
+                var content = document.getElementById("content");
+                var para = document.createElement("p");
+                var node = document.createTextNode(db[i][2]);
+                para.appendChild(node);
+                
+                content.appendChild(para);
+            }
+        };
+        </script>
+    </head>
+    <body>
+        <div id="content"></div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-27 10:10:12</nc-post-date>
+		<nc-title>PASCAL - Xuất dữ liệu</nc-title>
+		<nc-tags>pascal, xuat, du, lieu</nc-tags>
+		<nc-post-details category="posts" post-name="pascal-xuat-du-lieu" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<h2>Ôn lại: Để xuất dữ liệu ra màn hình, ta sử dụng thủ tục write. Có 3 dạng câu lệnh :</h2>
+<ol>a. <code>write('[Thông báo]',[biến]);</code></ol>
+Dùng để in ra thông báo cùng với các biến trên một dòng.
+Ví dụ 1:
+<code>write('Xin chao!');</code>
+<h6>Kết quả:</h6>
+<pre>Xin chao!_</pre>
+Ví dụ 2:
+<code>var a:=5;
+write('So a = ',a);</code>
+<h6>Kết quả:</h6>
+<pre>So a = 5_</pre>
+Ví dụ 3:
+<code>var a:=5,b:=8;
+write('So a = ',a,', so b = ',b);</code>
+<h6>Kết quả:</h6>
+<pre>So a = 5, so b = 8_</pre>
+<em>*Chú ý: _ là vị trí con trỏ chuột hiện ra trên manh hình. Các bạn để ý sẽ thấy!</em>
+
+<ol>b. <code>writeln('[Thông báo]',[biến]);</code></ol>
+Dùng để in ra thông báo cùng với các biến trên một dòng và sau đó đưa con trỏ chuột xuống dòng mới!
+Ví dụ 1:
+<code>writeln('Xin chao!');</code>
+<h6>Kết quả:</h6>
+<pre>Xin chao!
+_</pre>
+Ví dụ 2:
+<code>var a:=5;
+write('So a = ',a);</code>
+<h6>Kết quả:</h6>
+<pre>So a = 5
+_</pre>
+Ví dụ 3:
+<code>var a:=5,b:=8;
+writeln('So a = ',a);
+writeln('So b = ',b);</code>
+<h6>Kết quả:</h6>
+<pre>So a = 5
+So b = 8
+_</pre>
+<em>*Chú ý: _ là vị trí con trỏ chuột hiện ra trên manh hình. Các bạn để ý sẽ thấy!</em>
+
+<ol>c. <code>writeln;</code></ol>
+Không có tham số (các biến). Dùng để chèn thêm 1 dòng với (enter).
+Ví dụ 1:
+<code>write('Xin chao!');
+writeln;</code>
+<h6>Kết quả:</h6>
+<pre>Xin chao!
+_</pre>
+]]>
+		</nc-content>
+	</nc-parent>

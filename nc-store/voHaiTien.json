@@ -1,0 +1,23 @@
+{
+	"responseHeader": {
+		"responderGLN":"9501101020016",
+		"numberOfHits":0,
+		"gepirReturnCode": {"_":"0"}
+	}
+	,"gepirItem": {
+		"itemDataLine": {
+			"itemDataLanguage": {
+				"_":"vi","codeListVersion":""
+			}
+			,"returnCode": {
+				"_":"99","codeListVersion":"1.0"
+			}
+			,"gepirRequestedKey": {
+				"requestedKeyCode": {
+					"_":"GTIN","codeListVersion":"1"
+				}
+				,"requestedKeyValue":"08936036828207"
+			}
+		}
+	}
+}

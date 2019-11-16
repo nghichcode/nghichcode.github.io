@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-29 11:41:22</nc-post-date>
+		<nc-title>Giải mã con số trong giấc mơ!</nc-title>
+		<nc-tags>giai, ma, con, so, trong, giac, mo</nc-tags>
+		<nc-post-details category="posts" post-name="giai-ma-con-so-trong-giac-mo" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<h2>Công trình nghiên cứu đặc biệt: Giải mã con số trong giấc mơ!</h2>
+<blockquote>Sau nhiều năm nghiên cứu hăng say về các lĩnh vực xác suất thống kê, toán học, số học, và đặc biệt là <b>lô đề học</b> , cùng với sự kết hợp việc nghiên cứu, giải mã giấc mơ,...
+Cuối cùng chúng tôi cũng đã thành công trong việc tìm ra những con số bí ẩn gắn với giấc mơ của bạn!
+Những con số ấy có thể làm <b>"thay đổi cuộc đời bạn".</b>
+<br/>Ngay bây giờ, hãy để chúng tôi giải mã những giấc mơ của bạn nhé!</blockquote>
+
+        <style>
+            .box {
+                background-color: #fa5742;
+                max-width: 100%;
+                border: white;
+                box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+                display: block;
+                padding: 0px 4px 0px 6px;
+                margin: 10px 0px;
+                font-family: cursive;
+                color: white;
+            }
+            .line {
+                border-bottom: 2px solid #fa5742;
+                margin-bottom: 20px;
+                margin: 10px 0px;
+                font-family: cursive;
+            }
+            .oneLine {
+                display: inline;
+            }
+        </style>
+<script language="JavaScript">
+var cTime=10;
+var count=0;
+function decode(c,sorad){
+    code=document.getElementById(c).value;
+    if (code==="") {
+        document.getElementById(sorad).innerHTML="Vui lòng nhập ít nhất 1 kí tự!";
+        return;
+    }
+    if (count>=1){
+        var note="Đời người đâu có 2 lần!<br/>Hãy nhớ kĩ con số vừa nhận."+
+        "<br/>Nếu chưa kịp nhớ tức là bạn không có số phát tài rồi!"
+        document.getElementById(sorad).innerHTML=note;
+        document.getElementById("sorad2").innerHTML=note;
+        return;
+    }
+    var chem=[
+        "Hôm qua mơ gặp con dê,<br/>Hôm nay bạch thủ con đề 32.",
+        "Hôm qua ra đắp bờ đê,<br/>Hôm nay mới biết đề về 15.",
+        "Đêm qua mơ bắt con gà,<br/>Chiều nay bạch thủ 63 lộn đầu",
+        "Sáng sớm mơ chó xổng ra,<br/>Thôi thì cứ đánh 53 tiến lùi",
+        "Hôm qua mơ hết FA,<br/>Hôm nay đề nó ra ngay con 10.",
+        "Làm người phải biết nhìn lên,<br/>Mơ rùa nhớ đánh con 3 hai đầu.",
+        "Làm người ai chẳng phải mơ,<br/>Trưa nằm mơ rắn đánh 11 lô.",
+        "Ai đoán trước được chữ ngờ,<br/>Sáng nằm mộng quỷ tối chờ 82.",
+        "Sáng sớm mơ nhặt được tiền,<br/>Chiều đâu nhớ đánh liền 45.",
+        "Đêm qua không biết thực hư,<br/>Mộng tiên giáng thế - đánh đề 13.",
+        "Giữa trưa đương lúc trăng thanh,<br/>Mơ con ngựa trắng thôi đành 43.",
+        "Không có gấu làm sao mơ,<br/>Thôi thì số chú không vơ được tiền.",
+        "Ngủ trưa đương lúc mơ màng,<br/>Thôi thì ngủ tiếp chiều phang con đề."
+        ];
+    var aCode=code.split("");
+    var sumCode=0;
+    var ass="";
+    count++;
+    <!-- Thuat toan 1 --->
+    for(i=0;i<code.length;i++){
+        sumCode+=aCode[i].charCodeAt(0);
+    }
+    printDigit(sumCode%100,sorad);
+    <!-- Thuat toan 2 --->
+    sumCode=0;
+    for(i=0;i<code.length;i++){
+        sumCode+=(aCode[i].charCodeAt(0)%100);
+    }
+    sumCode=Math.floor(sumCode/(code.length));
+    printDigit(sumCode,"sorad2");
+    lchem=chem.length;
+    var i=Math.floor(lchem*Math.random());
+    document.getElementById("chem").innerHTML=chem[i];
+    }
+function printDigit(num,sorad){
+    delay(sorad,cTime);
+    setTimeout(function() {
+        document.getElementById(sorad).innerHTML=num;
+    },
+        (cTime+1)*1000
+    );
+}
+function delay(sorad,cT){
+    var c=cT;
+    if (c>=0){
+     document.getElementById(sorad).innerHTML="Vui lòng chờ " +(c--)+" giây!";
+    setTimeout(function(){delay(sorad,cT-1);},1000);
+    }
+}
+$(document).ready(function(){
+    var input = document.getElementById("txtmo");
+    input.addEventListener("keydown", function(event) {
+      if (event.keyCode === 13) {
+        decode("txtmo","sorad");
+      }
+    });
+});
+</script>
+<div align="center">
+    <div class="box" id="chem">Xin chào bạn đến với <a href=".">nghichcode.com</a>.
+Hãy nói cho tôi một sự vật, sự việc, hay một con vật,... hiện lên rõ nhất trong giấc mơ của bạn!
+<i>*Lưu ý: viết càng ngắn càng tốt nhé!</i>
+    </div>
+    <br/>
+    <div class="line" align="left">Bạch thủ đề:</div>
+    <div class="box" id="sorad">Vui lòng nhập để xem kết quả!</div>
+    <div class="line" align="left">Bạch thủ lô:</div>
+    <div class="box" id="sorad2">Vui lòng nhập để xem kết quả!</div>
+    <div align="left">
+        <input class="box oneLine" type="text" size="20" id="txtmo" placeholder="Nhập vào! Ví dụ: rắn cắn"
+        onsubmit ="decode('txtmo','sorad');"  />
+        <input class="box oneLine" type="button" value="Giải mã!"
+        onclick ="decode('txtmo','sorad');" />
+    </div>
+<br/>
+</div>
+<br/>
+<br/>
+]]>
+		</nc-content>
+	</nc-parent>

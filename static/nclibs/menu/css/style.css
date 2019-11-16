@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
+/*@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url('Pacifico-Regular-vn.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url('Pacifico-Regular-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'),
+    url('Pacifico-Regular.woff') format('woff'),
+    url('Pacifico-Regular.ttf') format('truetype'),
+    url('Pacifico-Regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+*/
+.home {width: 100%;position: relative;background-color: #1c1c1c;background-size: cover;background-position: center center;}
+/* ====================================
+Navigation 
+==================================== */
+.overlay-navigation {position: fixed;z-index: 99;top: 0;left: 0;width: 100%;height: 100%;background-color: hsla(0, 0%, 100%, 0.2);display: none;opacity: 0;}
+nav.bty-menu,nav.bty-menu ul {width: 100%;height: 100%;margin: 0;padding: 0;}
+nav.bty-menu ul {display: flex;list-style: none;}
+nav.bty-menu ul li {flex-basis: 20%;justify-content: center;align-items: center;height: 100%;overflow: hidden;opacity: 0;display: none;}
+nav.bty-menu li a {font-size: 0.8rem !important;position: relative;top: 46%;color: #fff;text-transform: uppercase;font-family: 'Work sans', sans-serif;font-weight: 300;letter-spacing: 4px;text-decoration: none !important;display: block;text-align: center;opacity: 0;}
+nav.bty-menu li a:before {content: '';width: 70px;height: 2px;background-color: #fff;position: absolute;top: 50%;left: 0;z-index: 100;-webkit-transform: translateX(-100%);transform: translateX(-100%);opacity: 0;transition: all .2s linear;}
+nav.bty-menu li a:after {font-size: 0.6rem;content: attr(data-content);transition: all .2s linear;opacity: 0;position: absolute;z-index: 100;color: #fff;display: block;margin-right: auto;margin-left: auto;left: 0;right: 0;bottom: -50px;text-transform: none;font-family: 'Open sans', sans-serif;font-weight: bold;font-style: italic;letter-spacing: 0;}
+nav.bty-menu li a:hover{color: #fff !important;}
+nav.bty-menu li a:hover:before {-webkit-transform: translateX(0);transform: translateX(0);opacity: 1;}
+nav.bty-menu li a:hover:after {-webkit-transform: translateY(15px);transform: translateY(15px);opacity: 1;}
+nav.bty-menu li:nth-of-type(1) {background-color: #29363B}
+nav.bty-menu li:nth-of-type(2) {background-color: #EA495F}
+nav.bty-menu li:nth-of-type(3) {background-color: #F4837D}
+nav.bty-menu li:nth-of-type(4) {background-color: #F5A05D}
+nav.bty-menu li:nth-of-type(5) {background-color: #99B998}
+/* ====================================
+Burger king
+==================================== */
+.open-overlay {position: absolute;right: 5rem;top: 3.2rem;z-index: 100;width: 34px;display: block;cursor: pointer;}
+.open-overlay span {display: block;height: 1px;background-color: #fff;cursor: pointer;margin-top: 8px;}
+.animate-top-bar {-webkit-animation: animate-top-bar .6s linear 1 both;animation: animate-top-bar .6s linear 1 both;}
+.animate-bottom-bar {-webkit-animation: animate-bottom-bar .6s linear 1 both;animation: animate-bottom-bar .6s linear 1 both;}
+.animate-middle-bar {-webkit-animation: animate-middle-bar .6s linear 1 both;animation: animate-middle-bar .6s linear 1 both;}
+.animate-out-top-bar {-webkit-animation: animate-out-top-bar .6s linear 1 both;animation: animate-out-top-bar .6s linear 1 both;}
+.animate-out-bottom-bar {-webkit-animation: animate-out-bottom-bar .6s linear 1 both;animation: animate-out-bottom-bar .6s linear 1 both;}
+.animate-out-middle-bar {-webkit-animation: animate-out-middle-bar .6s linear 1 both;animation: animate-out-middle-bar .6s linear 1 both;}
+/* ====================================
+Animation keyframes
+==================================== */
+@-webkit-keyframes animate-top-bar {
+  0% {background-color: #fff;}
+  50% {-webkit-transform: translateY(9px);  transform: translateY(9px);}
+  80% {  -webkit-transform: translateY(5px);  transform: translateY(5px);  background-color: #fff;}
+  100% {  -webkit-transform: translateY(0);  transform: translateY(0);  background-color: #378bab;}
+}
+@keyframes animate-top-bar {
+  0% {  background-color: #fff;}
+  50% {  -webkit-transform: translateY(9px);  transform: translateY(9px);}
+  80% {  -webkit-transform: translateY(5px);  transform: translateY(5px);  background-color: #fff;}
+  100% {  -webkit-transform: translateY(0);  transform: translateY(0);  background-color: #378bab;}
+}
+@-webkit-keyframes animate-bottom-bar {
+  0% {  background-color: #fff;}
+  50% {  -webkit-transform: translateY(-9px);  transform: translateY(-9px);}
+  80% {  -webkit-transform: translateY(-5px);  transform: translateY(-5px);  background-color: #fff;}
+  100% {  -webkit-transform: translateY(0);  transform: translateY(0);  background-color: #378bab;}
+}
+@keyframes animate-bottom-bar {
+  0% {  background-color: #fff;}
+  50% {  -webkit-transform: translateY(-9px);  transform: translateY(-9px);}
+  80% {  -webkit-transform: translateY(-5px);  transform: translateY(-5px);  background-color: #fff;}
+  100% {  -webkit-transform: translateY(0);  transform: translateY(0);  background-color: #378bab;}
+}
+@-webkit-keyframes animate-middle-bar {
+  0% {background-color: #fff;}
+  80% {background-color: #fff;}
+  100% {background-color: #378bab;}
+}
+@keyframes animate-middle-bar {
+  0% {background-color: #fff;}
+  80% {background-color: #fff;}
+  100% {background-color: #378bab;}
+}
+@-webkit-keyframes animate-out-top-bar {
+  0% {background-color: #378BAB;}
+  50% {-webkit-transform: translateY(9px);transform: translateY(9px);}
+  80% {-webkit-transform: translateY(5px);transform: translateY(5px);background-color: #378BAB;}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);background-color: #FFF;}
+}
+@keyframes animate-out-top-bar {
+  0% {background-color: #378BAB;}
+  50% {-webkit-transform: translateY(9px);transform: translateY(9px);}
+  80% {-webkit-transform: translateY(5px);transform: translateY(5px);background-color: #378BAB;}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);background-color: #FFF;}
+}
+@-webkit-keyframes animate-out-bottom-bar {
+  0% {background-color: #378BAB}
+  50% {-webkit-transform: translateY(-9px);transform: translateY(-9px)}
+  80% {-webkit-transform: translateY(-5px);transform: translateY(-5px);background-color: #378BAB;}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);background-color: #FFF;}
+}
+@keyframes animate-out-bottom-bar {
+  0% {background-color: #378BAB;}
+  50% {-webkit-transform: translateY(-9px);transform: translateY(-9px);}
+  80% {-webkit-transform: translateY(-5px);transform: translateY(-5px);background-color: #378BAB;}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);background-color: #FFF;}
+}
+@-webkit-keyframes animate-out-middle-bar {
+  0% {background-color: #378BAB;}
+  80% {background-color: #378BAB;}
+  100% {background-color: #fff;}
+}
+@keyframes animate-out-middle-bar {
+  0% {background-color: #378BAB;}
+  80% {background-color: #378BAB;}
+  100% {background-color: #fff;}
+}
+@media (max-width: 640px) {
+  nav.bty-menu ul {flex-direction: column;}
+  nav.bty-menu ul li {height: 20%;}
+  nav.bty-menu ul li a {font-size: 16px !important;}
+  nav.bty-menu li a:after {font-size: 10px;bottom: -25px;}
+  nav.bty-menu li a:hover:after {-webkit-transform: translateY(0);transform: translateY(0);}
+  .open-overlay {right: 1rem;}
+  nav.bty-menu li a:before {width: 25px;}
+}

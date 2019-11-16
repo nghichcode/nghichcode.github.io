@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-26 19:23:30</nc-post-date>
+		<nc-title>Lệnh if - PASCAL</nc-title>
+		<nc-tags>lenh, if, pascal</nc-tags>
+		<nc-post-details category="posts" post-name="lenh-if-pascal" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<h2>Lệnh if - PASCAL là câu lệnh cơ bản nhất trong lập trình PASCAL.
+Sau đây sẽ là một số bài tập ví dụ :</h2>
+
+<ol>1. Tìm số lớn hơn</ol>
+<h5>Đề bài:  Nhập 2 số a,b tìm số lớn hơn.</h5>
+<h5>Bài làm:</h5>
+<strong><code>program so_hon;
+uses crt;
+var a,b: integer;
+begin
+    clrscr;
+    writeln('Nhap hai so:');
+    readln(a,b);
+    if (a&gt;b) then write('So ',a,' lon hon so',b)
+    else write('So ',b,' lon hon so',a);
+    readln;
+end.</code></strong>
+<ol>2. Tìm số nhỏ nhất, lớn nhất.</ol>
+<h5>Đề bài:  Viết chương trình nhập 3 số a,b,c sau đó in ra màn hình số lớn nhất, nhỏ nhất.</h5>
+<h5>Bài làm:</h5>
+<strong><code>program max_min;
+uses crt;
+var a,b,c,max,min: integer;
+begin
+    clrscr;
+    writeln('Nhap a,b,c: ');
+    readln(a,b,c);</code>
+    
+    <code>max:=a; min:=a;
+    if (max&lt;b) then max:=b;
+    if (max&lt;c) then max:=c;
+    if (min&gt;b) then min:=b;
+    if (min&gt;c) then min:=c;</code>
+
+    <code>writeln('So lon nhat: ',max);
+    writeln('So be nhat: ',min);
+    readln;
+end.</code></strong>
+<ol>3. Tính toán.</ol>
+<h5>Đề bài:  Viết chương trình nhập 2 số a,b và một phép tính (+,-,*,/) sau đó  thực hiện phép tính và in ra màn hình kết quả.</h5>
+<h5>Bài làm:</h5>
+<strong><code>program tinh;
+uses crt;
+var a,b: integer;
+    pt:char;
+    T: real;
+begin
+    clrscr;
+    writeln('Nhap a,b: ');
+    readln(a,b);
+    writeln('Nhap phep tinh can thuc hien: ');
+    readln(pt);
+<code>    
+    if (pt='+') then T:=a+b;
+    if (pt='-') then T:=a-b;
+    if (pt='*') then T:=a*b;
+    if (pt='/') then T:=a/b;
+</code>    
+    writeln('Ket qua cua phep tinh: ',a,pt,b,' = ',T:8:2);
+    readln;
+end.</code></strong>
+<blockquote>Lưu ý: <code>"T:8:2"</code> được dùng để điều khiển cách in các số thực trên màn hình,
+trong đó 8 là độ rộng in số còn 2 là số chữ số thập phân.
+<a href="./pascal-in-so-thuc/">Tìm hiểu thêm.</a></blockquote>
+
+<ol>4. Kiểm tra 3 số thực.</ol>
+<h5>Đề bài:  Viết chương trình nhập 3 số a,b,c sau đó in ra màn hình 3 số đó có phải là 3 cạnh của 1 tam giác hay không.</h5>
+<h5>Bài làm:</h5>
+<strong><code>program tinh;
+uses crt;
+var a,b,c: real;
+begin
+    clrscr;
+    writeln('Nhap a,b,c: ');
+    readln(a,b,c);</code>
+
+    <code>if (a+b&lt;c) and (b+c&lt;a) and (a+c&lt;b) then</code>
+      <code>writeln('Ba so vua nhap la 3 canh cua 1 tam giac.');</code>
+    <code>else</code>
+      <code>writeln('Ba so vua nhap khong la 3 canh cua 1 tam giac.');</code>
+    <code>readln;
+end.</code></strong>
+]]>
+		</nc-content>
+	</nc-parent>

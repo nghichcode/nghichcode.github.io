@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-07-03 10:50:40</nc-post-date>
+		<nc-title>PASCAL - In số thực.</nc-title>
+		<nc-tags>pascal, in, so, thuc</nc-tags>
+		<nc-post-details category="posts" post-name="pascal-in-so-thuc" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<h2>Trong pascal việc in số thực sẽ khác với in số nguyên. Sau đây mình sẽ trình bày cách in ra số thực.</h2>
+
+Để in ra số thực ta sử dụng
+<code>writeln(r:n:m)</code>
+<b>*Trong đó: </b>r là một số thực bất kì, n là độ rộng in số (kể cả phần thập phân và dấu "."), m là số chữ số thập phân. Lưu ý: m,n là số tự nhiên và kết quả in ra sẽ căn thẳng lề phải.
+
+Ví dụ 1:
+<code>r:=5,3333;
+writeln(r:3:1);</code>
+(In ra số có độ rộng = 3 và có 1 chữ số phần thực)
+<h6>Kết quả:</h6>
+<pre>5.3
+123</pre>
+(Do tính cả dấu "." thì số in ra có độ rộng 3 nên chỉ in ra 5.3)
+
+Ví dụ 2:
+<code>r:=5,3;
+writeln(r:8:1);</code>
+(In ra số có độ rộng = 8 và có 1 chữ số phần thực)
+<h6>Kết quả:</h6>
+<pre>     5.3
+12345678</pre>
+(Do kết quả in ra cằn thẳng lề phải và số in ra có độ rộng là 8)
+
+Ví dụ 3:
+<code>r:=5,3;
+writeln(r:8:4);</code>
+(In ra số có độ rộng = 8 và có 4 chữ số phần thực)
+<h6>Kết quả:</h6>
+<pre>  5.3000
+12345678</pre>
+(Do kết quả in ra cằn thẳng lề phải và số in ra có độ rộng là 8, lấy 4 chữ số phần thập phân)
+]]>
+		</nc-content>
+	</nc-parent>

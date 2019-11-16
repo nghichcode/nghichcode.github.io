@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2016-11-16 16:48:43</nc-post-date>
+		<nc-title>Tìm độ dài xâu!</nc-title>
+		<nc-tags>tim, do, dai, xau</nc-tags>
+		<nc-post-details category="posts" post-name="tim-do-dai-xau" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Trong C, để tìm </span></b><b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">độ dài một string kiểu </span></b><b><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">char *</span></b><b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">, chúng có 2 </span></b><b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">cách phổ biến:</span></b>
+<div class="WordSection1">
+
+1. <span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Dùng vòng for:</span>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">int </span><b><span style="font-size:10pt;font-family:Consolas;color:#990000;">len</span></b><span style="font-size:10pt;font-family:Consolas;color:#333333;">(</span><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">char</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">* s) {</span></p>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">for</span><span style="font-size:10pt;font-family:Consolas;color:#333333;"> (</span><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">int</span><span style="font-size:10pt;font-family:Consolas;color:#333333;"> i = </span><span style="font-size:10pt;font-family:Consolas;color:teal;">0</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">; s[i] != </span><span style="font-size:10pt;font-family:Consolas;color:#df5000;">'\0'</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">; ++i);</span></p>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">return</span><span style="font-size:10pt;font-family:Consolas;color:#333333;"> i;</span></p>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#333333;">}</span></p>
+<span style="font-size:12pt;font-family:'Arial', 'sans-serif';">2. Dùng hàm </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">strlen</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';"> trong thư viện </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">string.h</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">:</span>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">int</span> <span style="font-size:10pt;font-family:Consolas;color:#0086b3;">len</span><span style="font-size:10pt;font-family:Consolas;color:#333333;"> = </span><span style="font-size:10pt;font-family:Consolas;color:#0086b3;">strlen</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">(</span><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">s</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">);</span></p>
+<p class="MsoNormal"><b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Ngoài ra còn một cách khác nữa, đó là sử dụng hàm </span></b><b><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">fprintf</span></b><b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">.</span></b></p>
+<p class="MsoNormal"><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Đặc tính của hàm </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">fprintf</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';"> là nó sẽ trả về một giá trị, đó là số kí tự mà nó đã in ra.</span></p>
+<p class="MsoNormal"><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Nhưng có một vấn đề đó là </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">fprintf </span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">mặc định sẽ ghi dữ liệu vào một file, vậy làm sao để tính được độ dài của chuỗi mà không cần ghi chuỗi vào file?.</span></p>
+<p class="MsoNormal"><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Trên các máy chạy hệ điều hành UNIX như Linux hay MacOS thì ta có </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">/dev/null</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';"> (đối với Windows có </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">nul</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">) là một output stream có nhiệm vụ không làm gì cả, mọi thứ ghi vào đây sẽ biến mất vậy nên ta có thể chọn cách sử dụng hàm </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">fprintf</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';"> để ghi vào đây, ta thực hiện việc này như sau:</span></p>
+<p class="MsoNormal"><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">1.<span style="font:7pt 'Times New Roman';">    </span></span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Đầu tiên, dùng hàm </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">fopen</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';"> để mở file </span><span style="font-size:12pt;font-family:Consolas;background:#F7F7F7;">/dev/null</span><span style="font-size:12pt;font-family:'Arial', 'sans-serif';"> với chế độ ghi</span></p>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">FILE</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">* f = fopen(</span><span style="font-size:10pt;font-family:Consolas;color:#df5000;">"/dev/null"</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">, </span><span style="font-size:10pt;font-family:Consolas;color:#df5000;">"w"</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">);</span></p>
+<p class="MsoNormal" style="text-indent:36pt;"><span style="font-size:12pt;font-family:'Arial', 'sans-serif';">Đối với Windows </span></p>
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">FILE</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">* f = fopen(</span><span style="font-size:10pt;font-family:Consolas;color:#df5000;">"nul"</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">, </span><span style="font-size:10pt;font-family:Consolas;color:#df5000;">"w"</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">);</span></p>
+2. Dùng hàm fprintf để lấy giá trị trả về
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"></p>
+
+</div>
+<div class="WordSection1">
+<p class="MsoNormal" style="line-height:18pt;background:#F7F7F7;word-break:break-all;"><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">int</span> <span style="font-size:10pt;font-family:Consolas;color:#0086b3;">len</span><span style="font-size:10pt;font-family:Consolas;color:#333333;"> = fprintf(f, </span><span style="font-size:10pt;font-family:Consolas;color:#df5000;">"%s"</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">, </span><span style="font-size:10pt;font-family:Consolas;color:#a71d5d;">s</span><span style="font-size:10pt;font-family:Consolas;color:#333333;">);</span></p>
+<p class="MsoNormal"><b><span style="font-size:12pt;font-family:'Arial', 'sans-serif';color:#e46c0a;">Đây mới chỉ liệt kê ra 3 cách, rất có thể bạn sẽ là người nghĩ ra cách thứ 4.</span></b><b> </b><b><span style="font-size:12pt;font-family:Wingdings;color:#e46c0a;">J</span></b></p>
+
+<a href="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js</a>
+<!-- My ads -->
+<ins class="adsbygoogle" style="display:block;"></ins>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+</div>
+]]>
+		</nc-content>
+	</nc-parent>

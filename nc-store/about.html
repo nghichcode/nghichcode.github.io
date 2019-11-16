@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html ng-app="ncStore">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>NC Store</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css" />
+  <script type="text/javascript" src="libs/bootstrap/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Angular -->
+  <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+	<!-- Custom -->
+  <script type="text/javascript" src="app.module.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+<body ng-controller="StoreControl">
+
+<div class="header container">
+	<h1 class="site-title">NC Store</h1>
+	<h2 class="site-description">Product of Nghich Code</h2>
+</div>
+<div class="menu container">
+  <ul class="nav nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="advanced-search.html">Advanced Search</a></li>
+        <li><a href="all-products.html">All Products</a></li>
+      </ul>
+    </li>
+    <li><a href="add-product.html">Add Product</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="content container row">
+  <h1>NGHICHCODE : <a href="#">nghichcode</a></h1>
+</div>
+
+<div class="footer clear-both">
+	<div class="social-links">
+		<ul>
+			<li class="badge"><a target="_blank" href="https://facebook.com/kenghichcode">Facebook</a></li>
+			<li class="badge"><a target="_blank" href="https://facebook.com/kenghichcode">Twitter</a></li>
+			<li class="badge"><a target="_blank" href="https://facebook.com/kenghichcode">Gmail</a></li>
+		</ul>
+	</div>
+	<div class="site-info">
+		<span>Coppy &copy 2019 NghichCode All Rights Reserved</span>
+	</div>
+</div>
+</body>
+</html>

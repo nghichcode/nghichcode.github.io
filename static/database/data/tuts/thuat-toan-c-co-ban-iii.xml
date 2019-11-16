@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2016-11-20 08:02:10</nc-post-date>
+		<nc-title>THUẬT TOÁN C CƠ BẢN (III)</nc-title>
+		<nc-tags>thuat, toan, c, co, ban, iii</nc-tags>
+		<nc-post-details category="posts" post-name="thuat-toan-c-co-ban-iii" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<ol>
+	<li><a href="https://www.blogger.com/null" name="_Toc467411726">Tính </a></li>
+</ol>
+(n lần x).
+
+<strong>#include </strong>
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n,x;</strong>
+
+<strong>   </strong><strong>printf("Nhap n: "); scanf("%d",&amp;n);</strong>
+
+<strong>   printf("Nhap x: "); scanf("%d",&amp;x);</strong>
+
+<strong>   float s=0;</strong>
+
+<strong>   int i;</strong>
+
+<strong>   for(i=1;i&lt;=n;i++)</strong>
+
+<strong>          s=sqrt(s+x);</strong>
+
+<strong>   printf("%.4f",s);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol start="2">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411727">Dãy Fibonaci.</a></li>
+</ol>
+Dãy 1,1,2,3,4,8,13,21… gọi là dãy Fibonaci.
+
+Chúng có quy luật : Hai số hạng đầu tiên bằng 1, các số hạng tiếp theo,
+
+từ số hạng thứ 3 trở đi bằng tổng của 2 số đứng ngay trước nó.
+
+Kí hiệu : F<sub>1</sub>=F2=1 ; F<sub>n</sub>=F<sub>n-1</sub>+F<sub>n-2</sub>, n&gt;3.
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n;</strong>
+
+<strong>   printf("Nhap so hang can tinh: "); scanf("%d",&amp;n);</strong>
+
+<strong>   int c;</strong>
+
+<strong>   if (n==1 || n==2) c=1;</strong>
+
+<strong>   else {</strong>
+
+<strong>          int a=1,b=1;</strong>
+
+<strong>          int i;</strong>
+
+<strong>          for(i=3;i&lt;=n;i++){</strong>
+
+<strong>                 c=a+b; a=b; b=c;</strong>
+
+<strong>          }</strong>
+
+<strong>   }</strong>
+
+<strong>   printf("So hang thu %d cua day Fibonaci : %d",n,c);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+
+<strong>Cách nữa: </strong>Dùng hàm đệ quy! Cách này hay nhưng mới học code sẽ khó hiểu.
+
+<strong>#include </strong>
+
+<strong>int Fibonaci(int n){</strong>
+
+<strong>   if (n&lt;=2) return 1;</strong>
+
+<strong>   else return Fibonaci(n-1)+Fibonaci(n-2);</strong>
+
+<strong>}</strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n;</strong>
+
+<strong>   printf("Nhap so hang can tinh: "); scanf("%d",&amp;n);</strong>
+
+<strong>   printf("So hang thu %d cua day Fibonaci : %d",n,Fibonaci(n));</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol start="3">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411728">Tính x<sup>n</sup></a></li>
+</ol>
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n,x;</strong>
+
+<strong>   printf("Nhap x: "); scanf("%d",&amp;x);</strong>
+
+<strong>   printf("Nhap n: "); scanf("%d",&amp;n);</strong>
+
+<strong>   long p=1;</strong>
+
+<strong>   int i;</strong>
+
+<strong>   for(i=1;i&lt;=n;i++)</strong>
+
+<strong>          p=p*x;</strong>
+
+<strong>   printf("%ld",p);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol start="4">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411729">Số bạn bè.</a></li>
+</ol>
+Hai số m,n là 2 số bạn bè nếu tổng các ước thực sự của m = n và ngược lại.
+
+Ví dụ: 284 và 220 là số bạn bè vì tổng các ước thực sự của 284 = 220 và ngược lại
+
+tổng các ước thực sự của 220 = 284
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int m,n;</strong>
+
+<strong>   printf("Nhap so m,n: "); scanf("%d %d",&amp;m,&amp;n);</strong>
+
+<strong>   int i,sm=0,soBanBe=0;</strong>
+
+<strong>   for(i=1;i&lt;=m/2;i++) if (m%i==0) sm=sm+i;</strong>
+
+<strong>   if (n==sm) {</strong>
+
+<strong>          int sn=0;</strong>
+
+<strong>          for(i=1;i&lt;=n/2;i++) if (n%i==0) sn=sn+i;</strong>
+
+<strong>          if (m=sn) soBanBe=1;</strong>
+
+<strong>   }</strong>
+
+<strong>   if (soBanBe==1) printf("%d va %d la so ban be.",m,n);</strong>
+
+<strong>   else printf("%d va %d khong la so ban be.",m,n);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol>
+	<li><a href="https://www.blogger.com/null" name="_Toc467411730"><strong>Mảng</strong></a></li>
+</ol>
+Mảng trong <strong>C</strong> khác với trrong <strong>Pascal</strong> ở chỗ :
+
+Giả sử mảng a có n phần tử thì,
+
+Trong <strong>Pascal</strong> các phần tử sẽ được đánh số từ 1 đến n.
+
+Còn trong <strong>C</strong> các phần tử sẽ được đánh số từ 0 đến n-1.
+
+Do vậy sẽ có một số vấn đề gây rắc rối cho ai mới học <strong>C</strong>.
+
+<em>Chẳng hạn như</em>: Nhiều người hiểu nhầm a<sub>0</sub>  là phần tử thứ không.
+
+Nhưng làm gì có phần tử thứ không??? Thế thì a<sub>0</sub> làm gì có nghĩa?
+
+Ở đây,ta hiểu một cách đơn giản đó là phần tử đầu tiên và tên nó là a<sub>o.</sub>
+
+<strong><em>Dưới đây là một số thuật toán cơ bản để xử lí mảng.</em></strong>
+<ol start="5">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411731">Sắp xếp. (Sort)</a></li>
+</ol>
+Để sắp xếp các phần thử của mảng cụ thể là sắp xếp tăng dần
+
+ta có 2 thuật toán cơ bản.
+
+<strong>Thuật toán 1:</strong>
+
+Đưa số bé nhất về đầu bằng cách so sánh phần tử thứ nhất với các phần tử còn lại
+
+Đưa số bé thứ 2 về vị trí 2 bằng cách so sánh phần tử thứ 2 với các phần tử còn lại
+
+…
+
+Làm như thế cho đến hết n phần tử sẽ được dãy tăng.
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n,i,j;</strong>
+
+<strong>   int a[100];</strong>
+
+<strong>   printf("Nhap so phan tu cua mang: "); scanf("%d",&amp;n);</strong>
+
+<strong>   printf("Nhap cac phan tu cua mang:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          printf("a[%d] = ",i+1); scanf("%d",&amp;a[i]);</strong>
+
+<strong>   }</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>     for(j=i+1;j</strong>
+
+<strong>       if (a[i]&gt;a[j]) {</strong>
+
+<strong>          int t=a[i];</strong>
+
+<strong>          a[i]=a[j];</strong>
+
+<strong>          a[j]=t;</strong>
+
+<strong>          }</strong>
+
+<strong>   printf("Mang sau khi sap xep:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          printf("%d ",a[i]);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+
+<strong>Thuật toán 2: </strong>Cũng đưa số bé nhất về đầu, số bé thứ 2 về vị trí 2,…
+
+như trên nhưng theo cách so sánh các phần tử liền kề và dồn chúng về đầu.
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n,i,j;</strong>
+
+<strong>   int a[100];</strong>
+
+<strong>   printf("Nhap so phan tu cua mang: "); scanf("%d",&amp;n);</strong>
+
+<strong>   printf("Nhap cac phan tu cua mang:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          printf("a[%d] = ",i+1); scanf("%d",&amp;a[i]);</strong>
+
+<strong>   }</strong>
+
+<strong>   for(i=n;i&gt;=1;i--)</strong>
+
+<strong>     for(j=0;j</strong>
+
+<strong>       if (a[j]&gt;a[j+1]) {</strong>
+
+<strong>          int t=a[j]; a[j]=a[j+1]; a[j+1]=t;</strong>
+
+<strong>          }</strong>
+
+<strong>   printf("Mang sau khi sap xep:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          printf("%d ",a[i]);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol start="6">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411732">Nhập mảng tìm phần tử lớn nhất,nhỏ nhất…</a></li>
+</ol>
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n,i,j;</strong>
+
+<strong>   int a[100];</strong>
+
+<strong>   printf("Nhap so phan tu cua mang: "); scanf("%d",&amp;n);</strong>
+
+<strong>   printf("Nhap cac phan tu cua mang:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          printf("a[%d] = ",i+1); scanf("%d",&amp;a[i]);</strong>
+
+<strong>   }</strong>
+
+<strong>   int max=a[0],min=a[0];</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          if (a[i]&gt;max) max=a[i];</strong>
+
+<strong>          if (a[i]</strong>
+
+<strong>          }</strong>
+
+<strong>   printf("Phan tu lon nhat: %d\n",max);</strong>
+
+<strong>   printf("Phan tu nho nhat: %d\n",min);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol start="7">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411733">Chèn 1 số vào mảng.</a></li>
+</ol>
+<strong>Yêu cầu</strong>: Chèn 1 số (x) vào vị trí thứ k của mảng.
+
+<strong>Chú ý</strong>: Vị trí 1 tương ứng với a<sub>0</sub>
+
+Vị trí 2 tương ứng với a<sub>1</sub>
+
+<sub>…</sub>
+
+Vị trí k tương ứng với a<sub>k-1</sub>
+
+Vậy nên khi nhập vào k ta nên gán k=k-1.
+
+<strong>Thuật toán</strong>: Dồn hết các phần tử từ ở vị trí k đến n về phía trước. Tức<strong> </strong>là:
+
+a<sub>k</sub> dồn lên a<sub>k+1</sub>
+
+…
+
+a<sub>n </sub>dồn lên a<sub>n+1</sub>
+
+Sau đó gán a<sub>k </sub>= x là xong.
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   int n,i,j;</strong>
+
+<strong>   int a[100];</strong>
+
+<strong>   printf("Nhap so phan tu cua mang: "); scanf("%d",&amp;n);</strong>
+
+<strong>   printf("Nhap cac phan tu cua mang:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          printf("a[%d] = ",i+1); scanf("%d",&amp;a[i]);</strong>
+
+<strong>   }</strong>
+
+<strong>   int x,k;</strong>
+
+<strong>   printf("Nhap so x,k: "); scanf("%d %d",&amp;x,&amp;k);</strong>
+
+<strong>   k=k-1;</strong>
+
+<strong>   for(i=n;i&gt;=k;i--)</strong>
+
+<strong>          a[i+1]=a[i];</strong>
+
+<strong>   a[k-1]=x;</strong>
+
+<strong>   printf("Mang sau khi chen:\n");</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>printf("%d ",a[i]);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol>
+	<li><a href="https://www.blogger.com/null" name="_Toc467411734"><strong>Xâu</strong></a></li>
+</ol>
+Thao tác với xâu cũng như thao tác với mảng nhưng là mảng kí tự.
+<ol start="8">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411735">Đếm số lần xuất hiện của một từ trong xâu.</a></li>
+</ol>
+<strong>#include </strong>
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   char s[100];</strong>
+
+<strong>printf("Nhap xau: ");</strong>
+
+<strong>   gets(s);</strong>
+
+<strong>   int i,dem=0;</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          if (s[i]=='s') dem++;</strong>
+
+<strong>   printf("%d",dem);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+
+<em>*Để nhập xâu, ta không nên dùng <strong>scanf</strong> mà dùng <strong>gets </strong>vì dùng <strong>scanf </strong>sẽ có</em>
+
+<em>            một số lỗi phát sinh.</em>
+
+Lưu ý: Một số hàm xử lí xâu hay dùng. (Nằm trong <strong>string.h</strong>)
+<table>
+<tbody>
+<tr>
+<td width="164"><strong>Hàm</strong></td>
+<td width="164"><strong>Dùng để</strong></td>
+<td width="164"><strong>Ví dụ</strong></td>
+</tr>
+<tr>
+<td width="164">size_t strlen(s)</td>
+<td width="164">Tính độ dài xâu s</td>
+<td width="164">strlen(“Hello”)=5</td>
+</tr>
+<tr>
+<td width="164">int strcmp(a,b)</td>
+<td width="164">So sánh xâu a với xâu b.<em>Trả về</em> :
+
+-1 nếu a</td>
+</tr>
+</tbody>
+</table>
+0 nếu a=b.
+
+1 nếu a&gt;b.
+
+strcmp(“a”,”b”) =-1
+
+strcmp(“d”,”c”) =1
+
+strcmp(“ab”,”ab”) =0
+
+char toupper(c)
+
+Chuyền chữ thường thành chữ hoa.
+
+toupper(‘k’)= K
+<ol start="9">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411736">Kiểm tra  xâu palindrome.</a></li>
+</ol>
+Xâu palindrome là xâu viết ngược hay xuôi đều như nhau.
+
+<strong>Ví dụ: </strong>“aaaa”, “asdsa”, “afghhgfa” là xâu<strong> </strong>palindrome.
+
+<strong>#include </strong>
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   char s[100];</strong>
+
+<strong>printf("Nhap xau: ");</strong>
+
+<strong>   gets(s);</strong>
+
+<strong>   int i,palindrome=1;</strong>
+
+<strong>   int len=strlen(s);</strong>
+
+<strong>   for(i=0;i</strong>
+
+<strong>          if (s[i]!=s[len-i-1]) palindrome=0;</strong>
+
+<strong>   </strong><strong>if (palindrome==1) printf("Xau vua nhap la xau palindrome.");</strong>
+
+<strong>printf("Xau vua nhap khong la xau palindrome.");</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<ol start="10">
+	<li><a href="https://www.blogger.com/null" name="_Toc467411737">Tìm vị trí xuất hiện của xâu.</a></li>
+</ol>
+<strong>#include </strong>
+
+<strong>#include </strong>
+
+<strong>int main(){</strong>
+
+<strong>   char sau[100],sauCanTim[100];</strong>
+
+<strong>   </strong><strong>printf("Nhap sau: "); gets(sau);</strong>
+
+<strong>   printf("Nhap sau can tim: "); gets(sauCanTim);</strong>
+
+<strong>   int i;</strong>
+
+<strong>   int lsau=strlen(sau);</strong>
+
+<strong>   int lsauCanTim=strlen(sauCanTim);</strong>
+
+<strong>   int timThay=0,viTri=0;</strong>
+
+<strong>   for(i=0;i&lt;=lsau-lsauCanTim;i++){</strong>
+
+<strong>          int li=i,j=0;</strong>
+
+<strong>          while ((sau[li]==sauCanTim[j]) &amp;&amp; (sauCanTim[j]!='\0')) {</strong>
+
+<strong>                 li++; j++;</strong>
+
+<strong>          }</strong>
+
+<strong>          if ((lsauCanTim==j) ) {</strong>
+
+<strong>                 timThay=1; viTri=i+1; break;</strong>
+
+<strong>          }</strong>
+
+<strong>   }</strong>
+
+<strong>   if (timThay==1) printf("Da tim thay xau o vi tri %d.",viTri);</strong>
+
+<strong>   else printf("Khong tim thay xau!");</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}</strong>
+<a href="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js</a>
+<!-- TC Ads -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px;"></ins>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+  
+
+]]>
+		</nc-content>
+	</nc-parent>

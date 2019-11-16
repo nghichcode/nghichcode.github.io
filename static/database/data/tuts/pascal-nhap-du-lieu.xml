@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-27 10:11:38</nc-post-date>
+		<nc-title>PASCAL - Nhập dữ liệu</nc-title>
+		<nc-tags>pascal, nhap, du, lieu</nc-tags>
+		<nc-post-details category="posts" post-name="pascal-nhap-du-lieu" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<h2>Ôn lại: Để nhập dữ liệu từ bàn phím, ta sử dụng thủ tục read. Có 3 dạng câu lệnh :</h2>
+<br/>
+<ol>a. <code>read(var1,var2,...);</code></ol>
+
+
+Dùng để đọc các biến trên 1 dòng. (Các biến phân cách nhau bởi ít nhất 1 dấu cách)
+Ví dụ:
+<code>read(a,b);</code>
+dữ liệu nhập vào như sau sẽ hợp lệ:
+5 2 hoặc 3 77
+
+<h4>Lưu ý:</h4> Phía trên chỉ đúng về mặt nguyên tắc. Để chương trình hoạt động thì ta phải chèn thêm câu lệnh <code>readln;</code> ở dưới. Bởi vì phải có một lệnh để đọc dấu enter, nếu không có chương trình sẽ lỗi.
+
+
+<ol>b. <code>readln(var1,var2,...);</code></ol>
+
+
+Dùng để đọc các biến trên nhiều dòng. (Các biến được phân cách nhau bởi dấu enter)
+Ví dụ:
+<code>readln(a,b);</code>
+dữ liệu nhập vào như sau sẽ hợp lệ:
+5
+2
+hoặc
+3
+77
+<ol>c. <code>readln;</code></ol>
+
+
+Không có tham số (var1,var2,...). Dùng để dừng màn hình và chờ người dùng nhấn enter.
+<em>*Thường dùng ở cuối phần thân chương trình!</em>
+]]>
+		</nc-content>
+	</nc-parent>

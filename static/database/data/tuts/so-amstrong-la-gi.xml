@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-26 18:35:41</nc-post-date>
+		<nc-title>Số amstrong là gì?</nc-title>
+		<nc-tags>so, amstrong, la, gi</nc-tags>
+		<nc-post-details category="posts" post-name="so-amstrong-la-gi" thumb-url="" />
+		<nc-content>
+<![CDATA[
+Số Amstrong là số nguyên thỏa mãn điều kiện : số đó phải bằng tổng lập phương các chữ số của nó.<!--more-->
+
+Ví dụ: Số 153 là số Amstrong vì: 153= 1<sup>3 </sup>+ 5<sup>3</sup> + 3<sup>3</sup>
+
+<em>Chương trình sau sẽ tìm các số Amstrong có trong khoảng từ 0-999.</em>
+
+
+<pre><strong>#include &lt;stdio.h&gt; </strong>
+
+<strong>main(){</strong>
+
+<strong>   int i,j,k;</strong>
+
+<strong>   for(i=0;i&lt;=9;i++)</strong>
+
+<strong>     for(j=0;j&lt;=9;j++)</strong>
+
+<strong>       for(k=0;k&lt;=9;k++)</strong>
+
+<strong>         if (i*i*i+j*j*j+k*k*k==100*i+10*j+k)</strong>
+
+<strong>           printf("%d\n",100*i+10*j+k);</strong>
+
+<strong>   return 0;</strong>
+
+<strong>}
+</strong></pre>
+<blockquote>Ngoài ra các bạn có  thể xem các bài tập về C <a href="./thuat-toan-c-co-ban-i/">ở đây</a>!</blockquote>
+]]>
+		</nc-content>
+	</nc-parent>

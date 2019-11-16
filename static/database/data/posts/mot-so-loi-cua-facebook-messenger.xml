@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc-parent>
+		<nc-author>
+			<name>Nghịch Code</name>
+			<user-name>nghichcode</user-name>
+			<profile-url value="http://nghichcode.com/nghichcode.html" />
+			<img-url value="http://nghichcode.com/nghichcode.html" />
+			<quote value="Code một cách tốt hơn!" />
+		</nc-author>
+		<nc-post-date>2017-06-20 18:10:17</nc-post-date>
+		<nc-title>Một số lỗi của Facebook Messenger!</nc-title>
+		<nc-tags>mot, so, loi, cua, facebook, messenger</nc-tags>
+		<nc-post-details category="posts" post-name="mot-so-loi-cua-facebook-messenger" thumb-url="" />
+		<nc-content>
+<![CDATA[
+<h2><strong>Cùng với Facebook, Facebook Messenger đã trở thành ứng dụng nhắn tin miễn phí rất phổ biến hiện nay. Tuy nhiên, không phải lúc nào chúng cũng hoạt động trơn tru. Dưới đây sẽ là một số lỗi phổ biến của Messenger và cách khắc phục. Hy vọng sẽ giúp ích được các bạn !</strong></h2>
+<strong> </strong>
+<ul>
+ 	<li><strong>Không thể đọc tin nhắn?</strong></li>
+</ul>
+<em>Bạn đang cố gửi tin nhắn văn bản hay nhãn dán sticker,... cho bạn bè của bạn và không thấy tin nhắn hồi âm?</em>
+<strong>Lý do</strong> : Messenger đã bị lỗi!
+<strong>Giải Pháp</strong>: Mở Google Play Store, nhấn nút menu và nhấn vào  My apps &amp; games (Ứng dụng và trò chơi của tôi). Từ đây, xem Messenger có phải là một trong các ứng dụng đang chờ cập nhật không. Nếu có, chỉ cần bấm vào đó và kích vào nút Update.
+Nếu vẫn không được, hãy thử dùng trình duyệt web để nhắn tin.
+<ul>
+ 	<li><strong>Một số hoặc tất cả tin nhắn của bạn đã biến mất?</strong></li>
+</ul>
+<em>Nếu bạn vô tình xóa các tin nhắn của bạn, thì làm thế nào để lấy lại được?</em>
+Nếu may mắn, bạn có thể tìm thấy chúng được lưu ở một nơi nào đó như phần lưu trữ hoặc spam chẳng hạn.
+<ul>
+ 	<li><strong>Messenger không hoạt động?</strong></li>
+</ul>
+<em>Một ngày đẹp trời, Messenger không hoạt động và bạn mở ra chỉ là màn hình trắng, và không gửi được tin nhắn.</em>
+
+Trước tiên, hãy kiểm tra hệ điều hành Android xem có được cập nhật phiên bản mới không bằng cách truy cập vào Cài đặt &gt; Thông tin điện thoại &gt; Cập nhật phần mềm &gt; Cập nhật. Đảm bảo có kết nối WiFi và pin nhiều hơn 50%. Nếu điện thoại của bạn cần cập nhật hệ điều hành, hãy cập nhật phiên bản mới nhất, rất có thể sẽ đủ để khắc phục các lỗi trên.
+Tiếp theo, thử xóa toàn bộ dữ liệu của Messenger bằng cách truy cập vào Cài đặt &gt; Ứng dụng &gt; Quản lí ứng dụng &gt; Tìm đến Messenger và chọn xóa dữ liệu.
+Đảm bảo ứng dụng cũng được cập nhật bằng cách mở Google Play và làm như phần trên.
+<ul>
+ 	<li><strong>Dùng Messenger lâu sẽ bị nóng máy?</strong></li>
+</ul>
+<em>Với những ai dùng Messenger để nhắn tin cho bạn bè thường xuyên chắc hẳn sẽ thấy máy nóng ran khi dùng một hồi lâu!</em>
+
+Lý do là Facebook đã thiết lập ứng dụng để chúng thường xuyên kiểm tra các bản cập nhật và thông báo và đặc biệt là khi nhắn tin, chúng sẽ gửi và nhận dữ liệu thường xuyên từ mạng (Wifi hoặc 2G/3G/4G).
+Cách khắc phục tốt nhất có lẽ là gỡ bỏ ứng dụng này đi. Chúng ta có thể dùng trình duyệt di động để đọc tin nhắn! Việc này sẽ giúp các bạn vừa có thể online Facebook vừa có thể cập nhật tin tức mới trên các trang mạng, thật tuyệt vời phải không?
+
+<p style="text-align: left;"><strong>Tuy nhiên, nếu bạn muốn tin nhắn của mình tự động gửi về khi có ai nhắn đến thì phải làm sao?</strong></p>
+Nhược điểm khi sử dụng Facebook trên trình duyệt là nó sẽ không hiện thông báo cũng như tin nhắn tự động, chỉ khi chúng ta refresh lại trang thì các thông báo và tin nhắn mới được cập nhật!
+
+Rất may, hiện nay có một số trình duyệt đã hỗ trợ việc tự động cập nhật thông báo của Facebook! Tiêu biểu như:
++ <a href="https://play.google.com/store/apps/details?id=com.UCMobile.intl&amp;hl=vi">UC Browser</a> : Đây là một ứng dụng duyệt web rất nhanh mà mình hay dùng.
+Khi duyệt Facebook, UC có 2 giao diện cho bạn chọn: Giao diện mobile – Khi tin nhắn và thông báo đến nó sẽ tự cập nhật tuy nhiên muốn mở tin nhắn thì UC sẽ bắt cài Messenger; Giao diện tiết kiệm dữ liệu – UC sẽ không tự động cập nhật thông báo và tin nhắn trong giao diện mà phải refresh trang, tuy nhiên chúng ta có thể bật chức năng cập nhật thông báo, khi có thông báo UC sẽ hiện lên trên thanh thông báo.
+<span style="font-size: 16px; line-height: 1.5;">+ <a href="https://play.google.com/store/apps/details?id=com.opera.mini.native&amp;hl=vi">Opera Mini</a>: Tương tự, Opera Mini bản mới nhất cũng có chức năng cập nhật thông báo như UC Browser!</span>
+<ul>
+ 	<li><strong>Messenger làm đầy bộ nhớ?</strong></li>
+</ul>
+Chúng ta cũng gỡ Messenger và làm tương tự như cách trên nhé!
+
+<strong>Để truy cập trình duyệt web một cách nhanh chóng!</strong>
+Ta nên bổ sung thêm phím tắt trên màn hình Home dẫn tới trang Facebook.
+]]>
+		</nc-content>
+	</nc-parent>
