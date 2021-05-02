@@ -72,7 +72,7 @@ function CreateSinglePage(ctg,page){
 function CreateSinglePost(ctg,title){
   showPBar(90);
   var pst=getCtg(ctg);id=1;
-  var url="./database/data/"+ctg+'/'+title+".xml";
+  var url="./static/database/data/"+ctg+'/'+title+".xml";
 
   $.ajax({
     url:url,
